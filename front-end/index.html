@@ -9,15 +9,25 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
+    <!-- <div id="header">
+      <img src="../logo.png" alt="Logo" id="logo" />
+    </div> -->
+
+    <header id="header">
+      <h1 id="header-title">WeekPlanner</h1>
+      <img src="../logo.png" alt="Logo" id="logo" />
+    </header>
+
     <div id="event-planner">
       <div id="month-display">
-        <span id="prev-month">&lt;</span>
+        <button id="prev-month">&lt;</button>
         <span id="current-month">Novembro 2023</span>
-        <span id="next-month">&gt;</span>
+        <button id="next-month">&gt;</button>
       </div>
       <div id="calendar-header-container">
         <div id="calendar-header">
@@ -34,12 +44,20 @@
     </div>
     <div id="modal" class="modal">
       <div class="modal-content">
-        <span class="close" id="close-modal">&times;</span>
+        <button class="close" id="close-modal">&times;</button>
         <h2>Adicionar Evento</h2>
         <label for="nome-evento">Nome do Evento:</label>
         <input type="text" id="nome-evento" required />
-        <label for="categoria-evento">Categoria do Evento (Trabalho, Pessoal, Outro):</label>
-        <input type="text" id="categoria-evento" required />
+        <label for="informacoes-evento">Descrição:</label>
+        <input type="text" id="informacoes-evento" />
+        <label for="categoria-evento">Categoria do Evento:</label>
+        <select id="categoria-evento" required>
+          <option value="">Selecione uma Categoria</option>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Escolar">Escolar</option>
+          <option value="Outro">Outro</option>
+        </select>
         <button id="adicionar-evento">Adicionar</button>
       </div>
     </div>

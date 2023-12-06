@@ -3,3 +3,7 @@ node_modules
 package-lock.json
 back-end/barramento-eventos/package.json
 back-end/servico-calendario/package.json
+package-lock.json
+node_modules/.package-lock.json
+package-lock.json
+node_modules/.package-lock.json

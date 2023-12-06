@@ -1,12 +1,26 @@
-body,
-html {
+/* Estilos Gerais */
+body, html {
   height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  /* Alterado de Arial para Roboto */
-  background-color: #f4f4f4;
+  background-color: #eaeaea; /* Fundo mais suave */
 }
 
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Isso vai alinhar verticalmente o conteúdo do header */
+  padding: 10px; /* Ajuste o padding conforme necessário */
+  background-color: #FFF; /* Ou qualquer outra cor que combine com o seu design */
+}
+
+#logo {
+  height: auto; /* Mantém a proporção do logo */
+  width: 80px; /* Ou a largura que você desejar, mas que combine com o layout */
+  margin-right: 20px; /* Espaço entre o logo e o conteúdo do lado direito */
+}
+
+/* Estilos do Planejador de Eventos */
 #event-planner {
   max-width: 800px;
   margin: auto;
@@ -14,8 +28,40 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: #ffffff; /* Fundo branco para o planejador */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  border-radius: 8px; /* Bordas arredondadas */
 }
 
+/* Botões de Navegação do Mês */
+#month-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #367c39;
+}
+
+#current-month {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Cabeçalho do Calendário */
 #calendar-header-container {
   width: 100%;
   margin-bottom: 10px;
@@ -31,11 +77,10 @@ html {
   font-weight: bold;
   padding: 10px;
   border: 1px solid #ddd;
-  background-color: #fff;
-  font-family: "Roboto", sans-serif;
-  /* Aplica a fonte Roboto */
+  background-color: #f7f7f7; /* Cor de fundo mais suave */
 }
 
+/* Corpo do Calendário */
 #calendar-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -65,46 +110,51 @@ html {
   font-weight: bold;
 }
 
-.event {
-  padding: 5px;
-  margin: 5px 5px 5px 0;
-  border: 1px solid transparent;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  /* Aplica a fonte Roboto */
-}
-
-/* Definições de cores específicas para categorias de evento */
-.event.red {
-  border-color: #ffcccc;
-}
-
-.event.green {
-  border-color: #ccffcc;
-}
-
-.event.blue {
-  border-color: #ccccff;
-}
-
 .delete-event {
-  float: right;
+  color: #ff0000; 
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
   cursor: pointer;
-  padding: 0 5px;
-  color: #ff0000;
-  font-family: "Roboto", sans-serif;
-  /* Aplica a fonte Roboto */
-  font-weight: 700;
-  /* Faz o 'X' mais grosso */
+  font-weight: bold; 
 }
 
-/* Ajuste o estilo do evento para acomodar o botão de exclusão */
 .event {
-  padding: 2px 10px;
-  margin: 2px;
   position: relative;
-  font-family: "Roboto", sans-serif;
-  /* Aplica a fonte Roboto, se ainda não aplicado acima */
+  font-weight: bold;
+}
+
+.event,
+.event.red,
+.event.green,
+.event.blue {
+  font-weight: bold;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px; 
+  background-color: #FFF; 
+}
+
+#header-title {
+  font-family: 'Lobster', cursive; 
+  font-size: 2em; 
+  color: #333; 
+  margin: 0; 
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    width: 50px; /* Reduz o tamanho do logo em dispositivos móveis */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header-title {
+    font-size: 1.5em; /* Diminui o tamanho do texto em dispositivos móveis */
+  }
 }

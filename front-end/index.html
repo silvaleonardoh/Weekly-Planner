@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planejador de Eventos</title>
+    <!-- Link para a fonte Google 'Roboto' -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="event-planner">
+      <div id="month-display">
+        <span id="prev-month">&lt;</span>
+        <span id="current-month">Novembro 2023</span>
+        <span id="next-month">&gt;</span>
+      </div>
+      <div id="calendar-header-container">
+        <div id="calendar-header">
+          <div class="day">Seg</div>
+          <div class="day">Ter</div>
+          <div class="day">Qua</div>
+          <div class="day">Qui</div>
+          <div class="day">Sex</div>
+          <div class="day">Sáb</div>
+          <div class="day">Dom</div>
+        </div>
+      </div>
+      <div id="calendar-body"></div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>Adicionar Evento</h2>
+        <label for="nome-evento">Nome do Evento:</label>
+        <input type="text" id="nome-evento" required />
+        <label for="categoria-evento"
+          >Categoria do Evento (Trabalho, Pessoal, Outro):</label
+        >
+        <input type="text" id="categoria-evento" required />
+        <button id="adicionar-evento">Adicionar</button>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

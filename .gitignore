@@ -1,3 +1,5 @@
 # Ignore a pasta node_modules
 node_modules
 package-lock.json
+back-end/barramento-eventos/package.json
+back-end/servico-calendario/package.json
